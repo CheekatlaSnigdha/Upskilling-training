@@ -1,0 +1,14 @@
+package com.cg.junit;
+
+public class Bank{
+	private int amount=10000;
+	public boolean withdraw(int amountToWithdraw) throws InsufficientFundsException {
+		if(amountToWithdraw>amount)
+		{
+			throw new InsufficientFundsException();
+		}
+		amount-=amountToWithdraw;
+		return true;
+	}
+}
+
